@@ -8,20 +8,20 @@ const quizData = [
     correct: "c",
   },
   {
-    question: "What is the most used programming language in 2017",
-    a: "Java",
-    b: "C",
-    c: "Python",
-    d: "JavaScript",
-    correct: "d",
+    question: "How much is 4 * 5?",
+    a: "2",
+    b: "20",
+    c: "25",
+    d: "16",
+    correct: "b",
   },
   {
-    question: "Who is the President of US in 2018?",
-    a: "iker casillas",
-    b: "Donald Trump",
-    c: "Rick Curt",
-    d: "Jack Willians",
-    correct: "b",
+    question: "How much is 9 * 9?",
+    a: "29",
+    b: "99",
+    c: "81",
+    d: "85",
+    correct: "c",
   },
   {
     question: "How much is 10 * 5?",
@@ -87,9 +87,9 @@ btn.addEventListener("click", () => {
     } 
     else {
       quizContainer.classList.toggle('move')
-      scoreEl.innerHTML = `<h2 class='call'> You answered correctly at ${score} / ${quizData.length} question </h2>
+      scoreEl.innerHTML = `<h2 class='call'> You answered correctly at ${score} / ${quizData.length} question. </h2>
       
-      <button onclick="location.reload()" >Start Over</button>
+      <button class="delete" onclick="location.reload()" >Start Over</button>
       `
     }
    

@@ -77,3 +77,6 @@ button:hover{
    border-top-right-radius: 1rem;
    overflow: hidden;
 }
+.delete{
+    border-bottom-left-radius: 0rem;
+}
