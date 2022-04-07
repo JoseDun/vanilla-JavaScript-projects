@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@300;500;700&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Roboto", sans-serif;
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+   /*  align-items: center; */
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.mobile-container{
+    width: 39.3rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px #3333331a;
+    overflow: hidden;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+header input{
+    background-color: #eee;
+    border : none;
+    border-radius: .3rem; 
+    padding: .5rem 1rem;
+}
+header button{
+    background-color: transparent;
+    color: #aaa;
+    border: none;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.fav-container{
+    padding: 1rem 0rem;
+    text-align: center;
+   
+}
+.fav-container h3{
+    font-size: medium;
+}
+.fav-meals{
+    display: flex;
+    padding: 0;
+    margin-top: 1rem;
+    width: 39.3rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    overflow-y: hidden;
+
+}
+
+.fav-meals li {
+    list-style: none;
+    width: 9.33rem;
+    margin-right: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1.2rem;
+}
+.fav-meals li img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+}
+
+.meals{
+    margin-top: 2rem;
+}
+.meal{
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331a;
+    margin: 1.5rem;
+    overflow: hidden;
+}
+.meal-header {
+    position: relative;
+}
+.meal-header .random{
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.meal-header img{
+    max-width: 100%;
+    object-fit: cover;
+    height: 290px;
+    width: 100%;
+}
+.meal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.meal-body h4{
+    margin: 0;
+}
+
+.meal-body .fav-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color:  #555;
+    cursor: pointer;
+}
+.meal-body .fav-btn.active{
+    color: rgb(192, 71, 71);
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+
+    .fav-meals{
+        display: flex;
+        padding: 0;
+        margin-top: 1rem;
+        width: inherit;
+        overflow-x:unset;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+        overflow-y: hidden;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .fav-meals li {
+        list-style: none;
+        width: 9.33rem;
+        margin: 0 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+}
