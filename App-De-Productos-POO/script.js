@@ -27,8 +27,20 @@ class UI {
   }
   deleteProduct(element) {
     if (element.name === "delete") element.parentElement.parentElement.remove()
+    this.showMessage('Borrado con exito','info')
   }
-  showMessage() {}
+  showMessage(message,typeColor) {
+    let div = document.createElement('div')
+    div.className = `alert alert-${typeColor} mt-4`
+    div.appendChild(document.createTextNode(message))
+    let container = document.querySelector('.container')
+    let app = document.getElementById('app')
+    container.insertBefore(div,app)
+    setTimeout(()=>{
+      document.querySelector('.alert').remove()
+    },900)
+
+  }
 }
 
 //* Eventos del Dom
@@ -45,6 +57,7 @@ productForm.addEventListener("submit", (e) => {
   const ui = new UI();
   ui.addProduct(product);
   ui.resetForm();
+  ui.showMessage('Agregado con exito','success')
   e.preventDefault();
 });
 
