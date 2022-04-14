@@ -40,18 +40,26 @@ function getTask(){
             <div class="card mb-3"
                 <div class="card-body">
                     <p>${title} - ${description}</p>
-                    <button class="btn btn-danger">
+                    <button class="btn btn-danger " onclick="deleteTask('${title}')">
                         Delete
                     </button>
                 </div>
             </div>
         `
-
-     
     }
-   
 }
+function deleteTask(title){
 
+   let tasks = JSON.parse(localStorage.getItem('tasks'))
+
+   for (let i = 0; i <tasks.length; i++) {
+       if (tasks[i].titleValue == title) {
+        tasks.splice(i,1)
+       }
+   }
+   localStorage.setItem('tasks',JSON.stringify(tasks))
+   getTask()
+}
 
 getTask()
 //*Events
